@@ -9,7 +9,7 @@ cross_tab = pd.crosstab([df['Date'], df['Line item'], df['Line item ID']], #Inde
                        )
 
 #different aggregate functions
-table = pd.pivot_table(df,index=['Date'],aggfunc={'Total impressions':np.sum})
+table = pd.pivot_table(df,index=['Date'],aggfunc={'Total impressions':np.sum})
 st.write(table)
 
 # Print the cross-tabulation
