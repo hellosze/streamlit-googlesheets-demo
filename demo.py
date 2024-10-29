@@ -3,7 +3,7 @@ import pandas as pd
 
 df = pd.read_csv("Crain's Sponsorship_House Line Item ends 11_30_2024 (refresh=true).csv")
 subset = df['Line item ID']
-subset = subset.astype(int)
+subset = subset.round().astype(int)
 # print(subset)
 unique_lines = subset.drop_duplicates()[:-1]
 
