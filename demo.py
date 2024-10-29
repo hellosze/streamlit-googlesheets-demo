@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_csv("Crain's Sponsorship_House Line Item ends 11_30_2024 (refresh=true).csv")
 
 # Create the cross-tabulation
-cross_tab = pd.crosstab(df['Date'], df['Total impressions'])
+cross_tab = pd.crosstab(df['Date'])
 
 # Print the cross-tabulation
 st.write(cross_tab)
