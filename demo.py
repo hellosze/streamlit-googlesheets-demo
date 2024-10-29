@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 df = pd.read_csv("Crain's Sponsorship_House Line Item ends 11_30_2024 (refresh=true).csv")
-subset = df['Line item ID']
+subset = df['Line item ID'].astype(int)
 # print(subset)
 unique_lines = subset.drop_duplicates()[:-1]
 
