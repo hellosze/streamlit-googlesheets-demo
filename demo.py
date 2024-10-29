@@ -2,8 +2,12 @@ import streamlit as st
 import pandas as pd
 
 df = pd.read_csv("Crain's Sponsorship_House Line Item ends 11_30_2024 (refresh=true).csv")
-st.write(df)
+# st.write(df)
 
+
+st.write('var oCrainLineItemIds_ = [')
+st.write(']')
+  
 # # Replace 'your_file.csv' with the actual path to your CSV file
 # uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
