@@ -5,10 +5,15 @@ import numpy as np
 df = pd.read_csv("Crain's Sponsorship_House Line Item ends 11_30_2024 (refresh=true).csv",thousands=r',')
 # df['Total impressions'] = df['Total impressions'].fillna(0).astype(int)
 
-# Create the cross-tabulation
-cross_tab = pd.crosstab([df['Date'], df['Line item'], df['Line item ID']], #Index 
-                         df['Total impressions']
-                       )
+
+def convert_to_int(value):
+    try:
+        return int(value.replace(',', ''))
+    except (ValueError, AttributeError):
+        return value  # Return original value if conversion fails
+
+df['Total impressions'] = df['Total impressions'].apply(convert_to_int)
+
 
 #different aggregate functions
 table = pd.pivot_table(df,index=['Date'],aggfunc={'Total impressions':np.sum})
