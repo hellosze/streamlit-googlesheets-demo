@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv("Crain's Sponsorship_House Line Item ends 11_30_2024 (refresh=true).csv",thousands=',')
+df = pd.read_csv("Crain's Sponsorship_House Line Item ends 11_30_2024 (refresh=true) (Sep 30, 2024 - Oct 29, 2024) - Crain's Sponsorship_House Line Item ends 11_30_2024 (refresh=true) (Sep 30, 2024 - Oct 29, 2024).csv",thousands=',')
 df = df[:-1]
 # df['Total impressions'] = df['Total impressions'].fillna(0).astype(int)
 
