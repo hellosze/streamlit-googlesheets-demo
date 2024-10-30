@@ -19,7 +19,7 @@ df['Total impressions'] = df['Total impressions'].apply(convert_to_int)
 #different aggregate functions
 table = pd.pivot_table(df,index=['Date'],aggfunc={'Total impressions':np.sum})
 st.write(table)
-st.line_chart(table, x='Date', y='Total impressions')
+st.line_chart(table)
 
 
 # Print the cross-tabulation
