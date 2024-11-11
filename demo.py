@@ -8,7 +8,7 @@ df = pd.read_csv(filename,thousands=',')
 df = df[:-1]
 # df['Total impressions'] = df['Total impressions'].fillna(0).astype(int)
 
-
+st.write(df.tail())
 def convert_to_int(value):
     try:
         return int(value.replace(',', ''))
