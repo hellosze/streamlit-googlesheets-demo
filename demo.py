@@ -21,8 +21,8 @@ df.sort_values(by='Date', inplace=True)
 
 #different aggregate functions
 table = pd.pivot_table(df,index=['Date'],aggfunc={'Total impressions':np.sum})
-table.sort_index(inplace=True)
-table.sort_values(by='Date', axis=0, inplace=True)
+# table.sort_index(inplace=True)
+# table.sort_values(by='Date', axis=0, inplace=True)
 
 st.write(table)
 st.line_chart(table)
