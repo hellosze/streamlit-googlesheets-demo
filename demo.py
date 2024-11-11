@@ -19,6 +19,7 @@ df['Total impressions'] = df['Total impressions'].apply(convert_to_int)
 
 #different aggregate functions
 table = pd.pivot_table(df,index=['Date'],aggfunc={'Total impressions':np.sum})
+table.sort_index(inplace=True)
 st.write(table)
 st.line_chart(table)
 
