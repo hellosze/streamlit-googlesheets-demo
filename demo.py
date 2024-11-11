@@ -15,6 +15,7 @@ def convert_to_int(value):
         return value  # Return original value if conversion fails
 
 df['Total impressions'] = df['Total impressions'].apply(convert_to_int)
+df['Date'] = pd.to_datetime(df['Date'])
 
 df.sort_values(by='Date', inplace=True)
 
