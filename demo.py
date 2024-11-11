@@ -17,7 +17,9 @@ def convert_to_int(value):
 df['Total impressions'] = df['Total impressions'].apply(convert_to_int)
 # df['TIME'] = pd.to_datetime(df['TIME'], format="%m/%d/%Y %I:%M:%S %p")
 
-df['Date'] = pd.to_datetime(df['Date', format="%m%d/%Y")
+df['Date'] = pd.to_datetime(df['Date')
+
+# df['Date'] = pd.to_datetime(df['Date', format="%m%d/%Y")
 
 df.sort_values(by='Date', inplace=True)
 
