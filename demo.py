@@ -5,7 +5,7 @@ import numpy as np
 ### add new file here
 filename = "crains_nov10.csv"
 df = pd.read_csv(filename,thousands=',')
-# df = df[:-1]
+df = df[:-1]
 # df['Total impressions'] = df['Total impressions'].fillna(0).astype(int)
 
 
