@@ -16,6 +16,7 @@ def convert_to_int(value):
 
 df['Total impressions'] = df['Total impressions'].apply(convert_to_int)
 
+df.sort_values(by='Date', inplace=True)
 
 #different aggregate functions
 table = pd.pivot_table(df,index=['Date'],aggfunc={'Total impressions':np.sum})
