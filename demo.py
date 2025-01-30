@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 ### add new file here
-filename = "crains_jan20.csv"
+filename = "crains_jan29.csv"
 df = pd.read_csv(filename,thousands=',')
 df = df[:-1]
 # df['Total impressions'] = df['Total impressions'].fillna(0).astype(int)
